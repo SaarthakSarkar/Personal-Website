@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    .project-card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 50;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    .nav-button:hover {
+      background-color: #4c51bf;
+      transition: background-color 0.3s ease-in-out;
+    }
+    .enlarged {
+      transform: scale(1.2);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-indigo-900 text-white p-4 flex justify-between items-center animate__animated animate__fadeInDown">
+    <h1 class="text-3xl font-bold">Hi ! I am Saarthak Sarkar</h1>
+    <nav>
+      <a href="#about" class="nav-button text-white px-4 py-2 rounded-lg mr-2">About Me</a>
+      <a href="#projects" class="nav-button text-white px-4 py-2 rounded-lg mr-2">Projects</a>
+      <a href="#education" class="nav-button text-white px-4 py-2 rounded-lg mr-2">Education</a>
+      <a href="#work" class="nav-button text-white px-4 py-2 rounded-lg mr-2">Work Experience</a>
+      <a href="#contact" class="nav-button text-white px-4 py-2 rounded-lg">Contact Me</a>
+    </nav>
+  </header>
+  <main class="container mx-auto p-4">
+    <!-- About Section -->
+   <section id="about" class="mb-8 animate__animated animate__fadeInUp">
+  <h2 class="text-2xl font-semibold mb-4 text-indigo-900 text-center">About Me</h2>
+  <div class="flex flex-col items-center mb-4">
+    <img src="saarthak.jpg" alt="Your Picture" class="w-60 h-60 rounded-full mb-4">
+    <div class="mx-auto" style="max-width: 100ch; margin-left: 0.5in; margin-right: 0.5in;">
+      <p class="text-justify">
+
+I am a recent graduate of the Indian Institute of Technology, Guwahati, class of 2024. Throughout my academic journey, I have developed a robust foundation in design, analysis, and project management, further enriched by practical experience through various internships and projects.
+
+During my tenure at IIT Guwahati, I undertook my bachelor thesis project under the guidance of Prof. S. K. Dwivedy, focusing on artificial pneumatic muscles-based exoskeletons. This research not only honed my technical skills but also deepened my understanding of advanced mechanical systems.
+
+My internship at Tata Motors, Pune, provided me with hands-on experience in the automotive industry, where I contributed to the design of motors and gearboxes for commercial electric vehicles. This opportunity reinforced my passion for developing sustainable and eco-friendly technologies.
+
+I am set to join HPCL as a Grade A Officer, where I aspire to leverage my skills and knowledge to contribute to the development of innovative technologies and solutions. My commitment to excellence, coupled with a keen eye for detail, drives me to continuously seek new ways to make a positive impact on the world.
+
+I am passionate about utilizing my expertise in mechanical engineering to contribute to the advancement of sustainable technologies and am eager to collaborate on projects that push the boundaries of innovation.
+</p>
+    </div>
+  </div>
+</section>
+
+
+<!--    <!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Education</title>-->
+<!--  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">-->
+<!--  <style>-->
+<!--    .shape {-->
+<!--      position: absolute;-->
+<!--      opacity: 0.7;-->
+<!--    }-->
+<!--    .shape-1 {-->
+<!--      width: 300px;-->
+<!--      height: 300px;-->
+<!--      background: url('-') no-repeat center center;-->
+<!--      background-size: contain;-->
+<!--      top: 30%;-->
+<!--      left: 50%;-->
+<!--      animation: float 6s ease-in-out infinite;-->
+<!--    }-->
+<!--    .shape-2 {-->
+<!--      width: 100px;-->
+<!--      height: 100px;-->
+<!--      background: url('pencil-outline.png') no-repeat center center;-->
+<!--      background-size: contain;-->
+<!--      top: 40%;-->
+<!--      left: 80%;-->
+<!--      animation: float 8s ease-in-out infinite;-->
+<!--    }-->
+<!--    .shape-3 {-->
+<!--      width: 100px;-->
+<!--      height: 100px;-->
+<!--      background: url('bulb-outline.png') no-repeat center center;-->
+<!--      background-size: contain;-->
+<!--      top: 70%;-->
+<!--      left: 20%;-->
+<!--      animation: float 5s ease-in-out infinite;-->
+<!--    }-->
+<!--    .shape-4 {-->
+<!--      width: 100px;-->
+<!--      height: 100px;-->
+<!--      background: url('medal-outline.png') no-repeat center center;-->
+<!--      background-size: contain;-->
+<!--      top: 30%;-->
+<!--      left: 50%;-->
+<!--      animation: float 7s ease-in-out infinite;-->
+<!--    }-->
+<!--    @keyframes float {-->
+<!--      0%, 100% {-->
+<!--        transform: translateY(0);-->
+<!--      }-->
+<!--      50% {-->
+<!--        transform: translateY(-20px);-->
+<!--      }-->
+<!--    }-->
+<!--  </style>-->
+</head>
+<body>
+  <section id="education" class="mb-8 bg-blue-100 p-8 rounded-lg relative overflow-hidden">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <h3 class="text-xl font-semibold mb-2 text-indigo-800">Education</h3>
+    <div class="flex flex-col md:flex-row items-center mb-4">
+      <img src="IITG_logo.png" alt="College Logo" class="w-32 h-32 mb-4 md:mb-0 md:mr-8 ml-20">
+      <table class="table-auto w-full bg-white shadow-lg rounded-lg">
+        <thead>
+          <tr class="bg-yellow-200">
+            <th class="px-4 py-2">Degree</th>
+            <th class="px-4 py-2">Institution</th>
+            <th class="px-4 py-2">Year</th>
+            <th class="px-4 py-2">CGPA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-2">B.Tech in Mechanical Engineering</td>
+            <td class="border px-4 py-2">Indian Institute of Technology Guwahati</td>
+            <td class="border px-4 py-2">2024</td>
+            <td class="border px-4 py-2">7.86</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 class="text-lg font-semibold mb-2 text-indigo-800">Key Courses</h4>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+      <ul class="list-disc list-inside bg-white p-4 rounded-lg shadow-lg">
+        <li>Solid Mechanics</li>
+        <li>Fluid Mechanics</li>
+        <li>Basic & Applied Thermodynamics</li>
+        <li>Heat Transfer</li>
+        <li>Manufacturing Technology</li>
+      </ul>
+      <ul class="list-disc list-inside bg-white p-4 rounded-lg shadow-lg">
+        <li>Machine Design</li>
+        <li>Theory of Machines</li>
+        <li>Electrical Machines</li>
+        <li>Optimization Methods in Engineering</li>
+        <li>CAD CAM</li>
+      </ul>
+      <ul class="list-disc list-inside bg-white p-4 rounded-lg shadow-lg">
+        <li>Advanced Machining Processes</li>
+        <li>Industrial Engg. & Operations Research</li>
+        <li>Blast and Impact Resistant Design</li>
+        <li>Gear Engineering</li>
+        <li>Mechanical Measurements</li>
+      </ul>
+      <ul class="list-disc list-inside bg-white p-4 rounded-lg shadow-lg">
+        <li>Robotics & Robot Application</li>
+        <li>Fundamentals of Artificial Intelligence</li>
+        <li>Control Systems</li>
+        <li>Internet of Things</li>
+        <li>Macroeconomics</li>
+      </ul>
+    </div>
+
+    <h4 class="text-lg font-semibold mb-2 text-indigo-800">Accomplishments</h4>
+    <ul class="list-disc list-inside bg-white p-4 rounded-lg shadow-lg mb-4">
+      <li>Bronze Medalist, Inter IIT Tech Meet 11.0, Amongst 23 IITs, for JLR’s Robotic Charging Challenge, 2023</li>
+      <li>3rd place in Pi-EV 2022, Formula Bharat, Amongst 21 teams from all over India & Asia Pacific region, 2022</li>
+      <li>National Rank 8 in CLOCKSPEED, A national Supply chain competition organized by XLRI, 2023</li>
+    </ul>
+
+    <h4 class="text-lg font-semibold mb-2 text-indigo-800">Extracurricular Activities</h4>
+    <ul class="list-disc list-inside bg-white p-4 rounded-lg shadow-lg">
+      <li>Completed Data Analytics & Visualization Virtual Internship offered by Accenture in collaboration with Forage</li>
+      <li>Volunteered under NSS, IITG to organize events like Diwali with BSF Jawans and campus cleanliness drive</li>
+      <li>Studied Professional Fine Arts, under Prachin Kala Kendra, for 6 years and got diploma of Visharad in Fine Arts</li>
+      <li>Participated in Product Management Cohort, Insurjo, by "The Product Folks" & learned PRDs and UX</li>
+    </ul>
+  </section>
+</body>
+</html>
+
+
+
+   <!-- Work Experience Section -->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Experience</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .timeline {
+      position: absolute;
+      right: 15%;
+      top: 1660px; /* Adjusted to align with the work experience section */
+    }
+    .timeline-line {
+      position: absolute;
+      width: 4px;
+      height: 850px;
+      background-color: #e5e7eb;
+      left: 15px;
+      top: 0px;
+      bottom: 0px;
+    }
+    .timeline-circle {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #ebf8ff;
+      border: 2px solid #60a5fa;
+      margin-bottom: 180px;
+    }
+    .timeline-circle.current {
+      background-color: #60a5fa;
+    }
+  </style>
+</head>
+<body class="relative">
+
+  <!-- Work Experience Section -->
+  <section id="work" class="mb-8 animate__animated animate__fadeInUp relative">
+    <h3 class="text-xl font-semibold mb-10 text-indigo-800">Work Experience</h3>
+
+    <div class="flex flex-col md:flex-row items-start mb-8">
+      <img src="hpcl.png" alt="Organization Logo" class="w-32 h-32 mb-4 md:mb-0 md:mr-40 ml-20">
+      <div class="flex-1">
+        <p><strong>Company:</strong> Hindustan Petroleum Corporation Limited</p>
+        <p><strong>Position:</strong> Engineering Officer</p>
+        <p><strong>Duration:</strong> Aug 2024</p>
+        <p class="mt-2">To be started</p>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-start mb-8">
+      <img src="tata.png" alt="Organization Logo" class="w-50 h-48 mb-4 md:mb-0 md:mr-16">
+      <div class="flex-1">
+        <p><strong>Company:</strong> Tata Motors</p>
+        <p><strong>Position:</strong> Research & Development Project Intern</p>
+        <p><strong>Duration:</strong> May 2023 - Aug 2023</p>
+        <p class="mt-2">
+          <ul class="list-disc list-inside">
+            <li>Designed a novel, cost-efficient 2-speed gearbox and motor, elevating performance for a commercial EV model.</li>
+            <li>Developed an analytical model using MATLAB, enhancing design precision via optimal parameter determination.</li>
+            <li>Proposed a 25% cost reduction & 31% reduction in power consumption with enhanced efficiency in new design.</li>
+            <li>Innovated ECU encasement, currently in production, enhancing quality & securing critical electronic components.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-start mb-8">
+      <img src="iitgr.png" alt="Organization Logo" class="w-40 h-40 mb-4 md:mb-0 md:mr-36 ml-16">
+      <div class="flex-1">
+        <p><strong>Company:</strong> IITG Racing (SAE Collegiate Club, IIT Guwahati)</p>
+        <p><strong>Position:</strong> Team Vice Captain</p>
+        <p><strong>Duration:</strong> Apr. 2022 - Apr 2023</p>
+        <p class="mt-2">
+          <ul class="list-disc list-inside">
+            <li>Directed a 40+ member SAE team to fabricate our first Formula Student Electric vehicle for Formula Bharat 2024.</li>
+            <li>Managed ₹10L+ budget for procurement of critical components like PSM motor, cells, and mechanical components.</li>
+            <li>Introduced methodical workflow among the 6 subsystems, showcasing leadership and cross-functional collaboration.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-start mb-8">
+      <img src="mt247.jpeg" alt="Organization Logo" class="w-40 h-40 mb-4 md:mb-0 md:mr-36 ml-16">
+      <div class="flex-1">
+        <p><strong>Company:</strong> My Tutor 247</p>
+        <p><strong>Position:</strong> Academic Mentor</p>
+        <p><strong>Duration:</strong> Oct. 2021 - Feb. 2022</p>
+        <p class="mt-2">
+          <ul class="list-disc list-inside">
+            <li>Developed educational content and conducted one-on-one sessions to resolve student queries.</li>
+            <li>Improved customer retention by restructuring student mentorship at an Ed-tech startup.</li>
+            <li>Addressed student issues through intensive communication, enhancing product quality and content.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-start mb-8">
+      <img src="rizee.png" alt="Organization Logo" class="w-40 h-40 mb-4 md:mb-0 md:mr-36 ml-16">
+      <div class="flex-1">
+        <p><strong>Company:</strong> My Learning Plus : Rizee</p>
+        <p><strong>Position:</strong> Product Management Intern</p>
+        <p><strong>Duration:</strong> May 2021 - Aug 2021</p>
+        <p class="mt-2">
+          <ul class="list-disc list-inside">
+            <li>Surveyed 50+ JEE aspirants & parents; identified 4 key deliverables for the company’s newly launched app.</li>
+            <li>Conducted in-depth data analysis to gain insights into daily user interaction by creating a Tableau Dashboard.</li>
+            <li>Added 7 new paid users by collaborating with social media & sales team to conduct live webinars on Youtube.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <!-- Add more work experience sections as needed -->
+  </section>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <div class="timeline-line"></div>
+    <div class="timeline-circle current"></div>
+    <div class="timeline-circle"></div>
+    <div class="timeline-circle"></div>
+    <div class="timeline-circle"></div>
+    <div class="timeline-circle"></div>
+  </div>
+</body>
+</html>
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .project-card {
+      background-color: #ebf8ff; /* Light blue background */
+    }
+    .project-card img,
+    .project-card video {
+      width: 100%;
+      height: auto; /* Maintain aspect ratio */
+      object-fit: cover; /* Ensure the image covers the container */
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Projects Section -->
+  <section id="projects" class="mb-8 animate__animated animate__fadeInUp">
+    <h2 class="text-2xl font-semibold mb-4 text-indigo-900">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Project Card 1 -->
+      <div class="project-card bg-white p-4 shadow-lg rounded-lg cursor-pointer" data-title="Project 1" data-description="Detailed description of project 1." data-image="https://drive.google.com/uc?id=PROJECT1_IMAGE_ID">
+        <video autoplay muted loop class="rounded-lg">
+          <source src="btp.mp4" type="video/mp4">
+        </video>
+        <h3 class="text-xl font-bold mt-4">Development of pneumatic artificial muscles-based exoskeleton for upper-limb rehabilitation</h3>
+        <p class="mt-2">Developed an economical upper limb exoskeleton using Pneumatic Artificial Muscles (PAMs) for people with paralysis.
+          Created mathematical models for precise trajectory planning and kinematics using MATLAB. Fabricated and tested prototype pneumatic muscles.
+          Built a 3D-printed, wearable,
+          3 DoF exoskeleton with PAMs and a pneumatic network, achieving a 31° arm elevation.</p>
+        <a href="https://github.com/SaarthakSarkar/BTP" target="_blank" class="bg-indigo-700 text-white px-4 py-2 rounded-lg mt-4 inline-block">Know More</a>
+      </div>
+      <!-- Project Card 2 -->
+      <div class="project-card bg-white p-4 shadow-lg rounded-lg cursor-pointer" data-title="Project 2" data-description="Detailed description of project 2." data-video="https://drive.google.com/uc?id=PROJECT2_VIDEO_ID">
+        <video autoplay muted loop class="rounded-lg">
+          <source src="Mechanism_Video.mp4" type="video/mp4">
+        </video>
+        <h3 class="text-xl font-bold mt-4">Autonomous Robotic Charger (Jaguar Land Rover, Inter IIT Tech Meet 11.0)</h3>
+        <p class="mt-2">Designed collapsible 5 DoF manipulator & devised algorithms for swift vehicle charging port access within 30s.
+Employed IPS, OpenCV, & Fiducial Markers for precise position & orientation detection of the charging port.
+Used Simscape to simulate the servo motor controls & links movements to access any point of the workspace..</p>
+        <a href="https://github.com/SaarthakSarkar/Autonomous-Robotic-Charger" target="_blank" class="bg-indigo-700 text-white px-4 py-2 rounded-lg mt-4 inline-block">Know More</a>
+      </div>
+      <!-- Project Card 3 -->
+      <div class="project-card bg-white p-4 shadow-lg rounded-lg cursor-pointer" data-title="Project 2" data-description="Detailed description of project 2." data-video="https://drive.google.com/uc?id=PROJECT2_VIDEO_ID">
+        <video autoplay muted loop class="rounded-lg">
+          <source src="yuvaan.mp4" type="video/mp4">
+        </video>
+        <h3 class="text-xl font-bold mt-4">Yuvaan: 6 wheeled Mars rover</h3>
+        <p class="mt-2">Designed, optimised and manufactured the drill mechanism for soil collection and reduced the time of descent
+of the drill significantly. Designed the rover chassis, optimised its space and performed simulations to make it more compact and strong
+and 20 % lighter than the previous model.</p>
+        <a href="https://github.com/YOUR_GITHUB_PROFILE" target="_blank" class="bg-indigo-700 text-white px-4 py-2 rounded-lg mt-4 inline-block">Know More</a>
+      </div>
+      <!-- Project Card 4 -->
+      <div class="project-card bg-white p-4 shadow-lg rounded-lg cursor-pointer" data-title="Project 3" data-description="Detailed description of project 3." data-image="https://drive.google.com/uc?id=PROJECT3_IMAGE_ID">
+        <img src="piev.png" alt="Project 3">
+        <h3 class="text-xl font-bold mt-4">Design of thermal management system of Electric Powertrain (Pi-EV 2022)</h3>
+        <p class="mt-2">Devised motor-controller thermal system; optimized radiator via calculations & CFD simulations in Ansys Fluent.
+Achieved 47% temperature reduction via battery thermal modeling, simulations, & calculations for cooling fans.</p>
+        <a href="https://github.com/SaarthakSarkar/Piev" target="_blank" class="bg-indigo-700 text-white px-4 py-2 rounded-lg mt-4 inline-block">Know More</a>
+      </div>
+      <!-- Project Card 5 -->
+      <div class="project-card bg-white p-4 shadow-lg rounded-lg cursor-pointer" data-title="Project 3" data-description="Detailed description of project 3." data-image="https://drive.google.com/uc?id=PROJECT3_IMAGE_ID">
+        <img src="fsae.jpg" alt="Project 3">
+        <h3 class="text-xl font-bold mt-4">Tachyon 3: Formula Student vehicle chassis</h3>
+        <p class="mt-2">Revamped Formula Student chassis via CAE structural analysis, optimizing design and enhancing performance. Reduced 15% chassis weight through CAE simulations for rigidity, stiffness, & impact while maintaining strength.</p>
+        <a href="https://github.com/YOUR_GITHUB_PROFILE" target="_blank" class="bg-indigo-700 text-white px-4 py-2 rounded-lg mt-4 inline-block">Know More</a>
+      </div>
+      <!-- Project Card 6 -->
+      <div class="project-card bg-white p-4 shadow-lg rounded-lg cursor-pointer" data-title="Project 3" data-description="Detailed description of project 3." data-image="https://drive.google.com/uc?id=PROJECT3_IMAGE_ID">
+        <img src="iot.png" alt="Project 3">
+        <h3 class="text-xl font-bold mt-4">Smart Attendance monitoring system</h3>
+        <p class="mt-2">The project "Smart Attendance Monitoring System" aims to design a cost-effective and efficient attendance logging system using
+          NodeMCU and RFID sensors. The system automates attendance recording in various environments, offering real-time data storage and access through cloud
+          applications like Google Sheets. Key features include RFID-based identification, wireless connectivity, user-friendly interfaces, and notifications for administrators and attendees.</p>
+        <a href="https://github.com/SaarthakSarkar/Smart-Attendance-monitoring-system" target="_blank" class="bg-indigo-700 text-white px-4 py-2 rounded-lg mt-4 inline-block">Know More</a>
+      </div>
+      <!-- Project Card 7 -->
+      <div class="project-card bg-white p-4 shadow-lg rounded-lg cursor-pointer" data-title="Project 3" data-description="Detailed description of project 3." data-image="https://drive.google.com/uc?id=PROJECT3_IMAGE_ID">
+        <img src="opti.png" alt="Project 3">
+        <h3 class="text-xl font-bold mt-4">Optimization Algorithms for Multivariate functions</h3>
+        <p class="mt-2">
+Implemented Conjugate Gradient, Bounding Phase, Bisection, and Bracket-Operator Penalty methods for multi-variable optimization. The project optimized complex problems by iteratively computing search directions via gradient descent and ensuring constraint adherence through penalty functions.
+          Comprehensive testing validated the algorithms' performance and accuracy.</p>
+        <a href="https://github.com/SaarthakSarkar/Optimization-algorithms-for-Multivariate-Functions" target="_blank" class="bg-indigo-700 text-white px-4 py-2 rounded-lg mt-4 inline-block">Know More</a>
+      </div>
+      <!-- Project Card 8 -->
+      <div class="project-card bg-white p-4 shadow-lg rounded-lg cursor-pointer" data-title="Project 3" data-description="Detailed description of project 3." data-image="https://drive.google.com/uc?id=PROJECT3_IMAGE_ID">
+        <img src="nst.jpg" alt="Project 3">
+        <h3 class="text-xl font-bold mt-4">Neural Style Transfer</h3>
+        <p class="mt-2">Utilized TensorFlow & PyTorch for neural style transfer to an image, employing VGG19 for style extraction.
+Leveraged DeepLabv3 for image segmentation, enabling targeted foreground transformation & alpha blending.
+Employed OpenCV to blend stylized subject & customized background, leveraging alpha masks for integration.</p>
+        <a href="https://github.com/SaarthakSarkar/Neural_Style_Transfer" target="_blank" class="bg-indigo-700 text-white px-4 py-2 rounded-lg mt-4 inline-block">Know More</a>
+      </div>
+      <!-- Project Card 9 -->
+      <div class="project-card bg-white p-4 shadow-lg rounded-lg cursor-pointer" data-title="Project 3" data-description="Detailed description of project 3." data-image="https://drive.google.com/uc?id=PROJECT3_IMAGE_ID">
+        <img src="crop.png" alt="Project 3">
+        <h3 class="text-xl font-bold mt-4">Crop yield Prediction</h3>
+        <p class="mt-2">Utilized scikit-learn & pandas to preprocess data, & employed a range of regression models to predict crop yield.
+Transformed categorical data with OneHotEncoder & standardized numerical features using StandardScaler.
+Achieved accuracy of 97.78%, made a website using HTML/CSS & Python Flask to retrieve the predicted yield.</p>
+        <a href="https://github.com/SaarthakSarkar/Crop_Yield_Prediction" target="_blank" class="bg-indigo-700 text-white px-4 py-2 rounded-lg mt-4 inline-block">Know More</a>
+      </div>
+      <!-- Project Card 10 -->
+      <div class="project-card bg-white p-4 shadow-lg rounded-lg cursor-pointer" data-title="Project 3" data-description="Detailed description of project 3." data-image="https://drive.google.com/uc?id=PROJECT3_IMAGE_ID">
+        <img src="battery.png" alt="Project 3">
+        <h3 class="text-xl font-bold mt-4">Battery Pack and Accumulator container design (FSEV 2021)</h3>
+        <p class="mt-2">Worked with the AMS team to select the cell chemistry, design the Battery Pack and optimize its space and structure.
+Designed the accumulator container and performed FEA using Ansys Mechanical to check it’s performance under various loads and thus optimized material cost</p>
+        <a href="https://github.com/SaarthakSarkar/Piev" target="_blank" class="bg-indigo-700 text-white px-4 py-2 rounded-lg mt-4 inline-block">Know More</a>
+      </div>
+      <!-- Project Card 11 -->
+      <div class="project-card bg-white p-4 shadow-lg rounded-lg cursor-pointer" data-title="Project 3" data-description="Detailed description of project 3." data-image="https://drive.google.com/uc?id=PROJECT3_IMAGE_ID">
+        <img src="wedm.jpg" alt="Project 3">
+        <h3 class="text-xl font-bold mt-4">Artwork using Wire-EDM</h3>
+        <p class="mt-2">Used Wire-EDM to make a complex small sized pattern artwork which is not possible for traditional machining.</p>
+        <a href="https://www.youtube.com/watch?v=CCzsAbguRjI" target="_blank" class="bg-indigo-700 text-white px-4 py-2 rounded-lg mt-4 inline-block">Know More</a>
+      </div>
+      <!-- Project Card 12 -->
+      <div class="project-card bg-white p-4 shadow-lg rounded-lg cursor-pointer" data-title="Project 3" data-description="Detailed description of project 3." data-image="https://drive.google.com/uc?id=PROJECT3_IMAGE_ID">
+        <img src="carpenter.png" alt="Project 3">
+        <h3 class="text-xl font-bold mt-4">Multi-purpose Carpentery Tool</h3>
+        <p class="mt-2">The multi-purpose carpentry tool is a versatile, ergonomic device combining a saw, hammer, screwdriver, and pliers into a single, compact unit. Designed for efficiency in carpentry and construction projects, its comfortable grip and balanced weight distribution allow for extended use,
+          reducing fatigue and discomfort while performing multiple tasks with ease.</p>
+        <a href="https://github.com/SaarthakSarkar/Multipurpose-carpentary-tool" target="_blank" class="bg-indigo-700 text-white px-4 py-2 rounded-lg mt-4 inline-block">Know More</a>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+  </section>
+</body>
+</html>
+
+
+<!--  <!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Contact Me</title>-->
+<!--  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">-->
+<!--  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>-->
+<!--</head>-->
+<!--<body>-->
+  <!-- Contact Me Section -->
+  <section id="contact" class="mb-8 animate__animated animate__fadeInUp">
+    <h2 class="text-2xl font-semibold mb-4 text-indigo-900">Contact Me</h2>
+    <p>If you would like to get in touch, please reach out to me through one of the following platforms or fill out the form below:</p>
+
+    <div class="flex space-x-4 mt-4 social-icons mb-8">
+      <a href="https://www.linkedin.com/in/saarthaksarkar/" target="_blank" class="text-indigo-900 hover:text-indigo-700">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a href="https://www.instagram.com/saarthaksarkar/" target="_blank" class="text-indigo-900 hover:text-indigo-700">
+        <i class="fab fa-instagram fa-2x"></i>
+      </a>
+      <a href="https://www.facebook.com/saarthak.sarkar.56/" target="_blank" class="text-indigo-900 hover:text-indigo-700">
+        <i class="fab fa-facebook fa-2x"></i>
+      </a>
+      <a href="https://github.com/SaarthakSarkar" target="_blank" class="text-indigo-900 hover:text-indigo-700">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      <a href="https://drive.google.com/file/d/1LXhmlt2xp7A4Om7Hli0Rm-i5LwwDFeKf/view?usp=sharing" target="_blank" class="text-indigo-900 hover:text-indigo-700">
+        <i class="fas fa-file-alt fa-2x"></i>
+      </a>
+    </div>
+
+    <form action="https://formspree.io/f/mwpekndq" method="POST" class="max-w-md mx-auto bg-blue p-8 shadow-lg rounded-lg">
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+        <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+        <input type="email" id="email" name="_replyto" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      </div>
+      <div class="mb-4">
+        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+        <textarea id="message" name="message" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"></textarea>
+      </div>
+      <div class="flex items-center justify-between">
+        <button type="submit" class="bg-indigo-900 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Send
+        </button>
+      </div>
+    </form>
+  </section>
+</body>
+</html>
+

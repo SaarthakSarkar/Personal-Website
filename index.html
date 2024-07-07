@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.7;
+      transition: transform 0.2s;
+    }
+    .shape:hover {
+      animation: none;
+      transform: scale(1.1);
+    }
+    .shape-1 {
+      width: 150px;
+      height: 150px;
+      background-color: #fcd34d;
+      top: 10%;
+      left: 20%;
+      animation: float 6s ease-in-out infinite;
+    }
+    .shape-2 {
+      width: 200px;
+      height: 200px;
+      background-color: #60a5fa;
+      top: 40%;
+      left: 70%;
+      animation: float 8s ease-in-out infinite;
+    }
+    .shape-3 {
+      width: 100px;
+      height: 100px;
+      background-color: #f87171;
+      top: 70%;
+      left: 30%;
+      animation: float 5s ease-in-out infinite;
+    }
+    .shape-4 {
+      width: 120px;
+      height: 120px;
+      background-color: #34d399;
+      top: 25%;
+      left: 60%;
+      animation: float 7s ease-in-out infinite;
+    }
+    .shape-5 {
+      width: 180px;
+      height: 180px;
+      background-color: #a78bfa;
+      top: 60%;
+      left: 80%;
+      animation: float 9s ease-in-out infinite;
+    }
+    .shape-6 {
+      width: 140px;
+      height: 140px;
+      background-color: #34d399;
+      top: 45%;
+      left: 20%;
+      animation: float 7s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100 overflow-hidden relative">
+  <div class="absolute top-4 right-4 z-20">
+    <a href="https://www.linkedin.com/in/saarthaksarkar/" target="_blank" class="text-indigo-900 hover:text-indigo-700 mx-2">
+      <i class="fab fa-linkedin fa-2x"></i>
+    </a>
+    <a href="https://www.instagram.com/saarthaksarkar/" target="_blank" class="text-indigo-900 hover:text-indigo-700 mx-2">
+      <i class="fab fa-instagram fa-2x"></i>
+    </a>
+    <a href="https://www.facebook.com/saarthak.sarkar.56/" target="_blank" class="text-indigo-900 hover:text-indigo-700 mx-2">
+      <i class="fab fa-facebook fa-2x"></i>
+    </a>
+  </div>
+  <div class="text-center z-10">
+    <img src="saarthak.jpg" alt="Your Picture" class="w-48 h-48 rounded-full mb-4 mx-auto">
+    <h1 class="text-5xl font-bold text-indigo-900 mb-2">Welcome to My Website</h1>
+    <p class="text-lg text-gray-700 mb-6">Explore my projects, experience, and more.</p>
+    <a href="portfolio.html#about" class="px-4 py-2 bg-indigo-600 text-white rounded-full inline-block">Enter</a>
+  </div>
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <div class="shape shape-3"></div>
+  <div class="shape shape-4"></div>
+  <div class="shape shape-5"></div>
+<div class="shape shape-6"></div>
+</body>
+</html>
+
+
+
+
+
